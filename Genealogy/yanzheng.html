@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        #p1 {
+            width: 180px;
+            height: 140px;
+            display: none;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table>
+
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" id="userName" name="userName" /><span style=" color: red;">*</span><label
+                        id="label_UserName"></label></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="text" id="pwd" name="pwd" /><span style="color:red;">*</span><label
+                        id="lable_pwd"></label></td>
+            </tr>
+            <!-- <tr>
+                <td>确认密码:</td>
+                <td><input type="text" id="pwdConfirm" name="pwdConfirm" /><span style="color:red;">*</span><label
+                        id="label_pwdConfirm"></label></td>
+            </tr> -->
+            <tr>
+                <td>邮箱:</td>
+                <td><input type="text" id="email" name="email" /><span style="color:red;">*</span><label
+                        id="label_email"></label></td>
+            </tr>
+            <tr>
+                <td><input id="reg" type="button" value="提交" /></td>
+                <td></td>
+            </tr>
+        </table>
+        <!-- <p id="p1"><img style="width:32px;height:32px" src="../img/loading.gif" alt="" />正在提交,请稍候......</p> -->
+    </form>
+    <script src="./lib/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+    
+            //用户名失去焦点
+            $("#userName").on("keyup blur", function () {
+                userNameCheck();
+            });
+    
+            //密码失去焦点
+            $("#pwd").on("keyup blur", function () {
+                pwdCheck();
+            });
+    
+            //确认密码失去焦点
+            $("#pwdConfirm").on("keyup blur", function () {
+                pwdConfirmCheck();
+            });
+    
+            //邮箱失去焦点
+            $("#email").on("keyup blur", function () {
+                emailCheck();
+            });
+            //提交
+            $("#reg").click(function () {
+                if (userNameCheck() == false || pwdCheck() == false || pwdConfirmCheck() == false ||
+                    emailCheck() == false) {
+                    //alert("检查表单");
+                    return;
+                } else {
+                    $.ajax({
+                        type: "post",
+                        url: "http://39.98.47.107:9005/user/addUser",
+                        data: $("form").serialize(),
+                        dataType : 'json',
+                        success: function (response, status, xhr) {
+                            if (response == "success") {
+                                alert("注册成功!");
+                                // window.location = "baidu.com";
+                            } else {
+                                alert("注册失败!");
+                            }
+                        },
+                        error: function () {
+    
+                            alert("ajax错误");
+                        }
+                    });
+    
+                }
+    
+            });
+            $(document).ajaxStart(function () {
+                $("#p1").show();
+            }).ajaxStop(function () {
+                $("#p1").hide();
+            });
+        });
+    
+        //验证邮箱格式
+        function checkEmail(str) {
+            var re = /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+            if (re.test(str)) {
+                return true;
+            } else {
+                return false;
+            };
+        };
+    
+        function userNameCheck() {
+            var userName = $("#userName").val();
+            //用户名不能为空
+            if (userName == "") {
+    
+    
+                $("#label_UserName").html("<strong style='color:red'>用户名不能为空!</strong>");
+                //$("#userName")[0].focus();
+                return false;
+    
+            } else {
+                $.ajax({
+                    type: "post",
+                    url: "http://39.98.47.107:9005/user/addUser",
+                    data: $.param({
+                        userName: $("#userName").val()
+                    }),
+                    dataType : 'json',
+                    success: function (response, status, xhr) {
+                        if (response == "ok") {
+                            $("#label_UserName").html(
+                                '<img style="width: 15px; height: 14px; " src="../img/aa.png" alt="" />');
+                            return true;
+                        } else {
+                            $("#label_UserName").html("<strong style='color:red'>用户名已存在!</strong>");
+                            return false;
+                        }
+                    }
+                });
+            }
+        };
+    
+        // function pwdCheck() {
+        //     var pwd = $("#pwd").val();
+        //     if (pwd == "") {
+    
+        //         $("#lable_pwd").html("<strong style='color:red'>密码不能为空!</strong>");
+        //         //$("#pwd")[0].focus();
+        //         return false;
+        //     } else {
+        //         if (pwd.length < 6) {
+        //             $("#lable_pwd").html("<strong style='color:red'>密码不能少于6位!</strong>");
+        //             return false;
+        //         } else {
+        //             $("#lable_pwd").html('<img style="width: 15px; height: 14px; " src="../img/aa.png" alt="" />');
+        //             return true;
+        //         }
+        //     }
+        // };
+    
+        function pwdConfirmCheck() {
+            var pwdConfirm = $("#pwdConfirm").val();
+            if (pwdConfirm == "") {
+                $("#label_pwdConfirm").html('<strong style="color:red">确认密码不能为空!</strong>');
+                return false;
+            } else {
+                if ($("#pwdConfirm").val() != $("#pwd").val()) {
+                    $("#label_pwdConfirm").html('<strong style="color:red">两次输入的密码不一致,请重新输入!</strong>');
+                    return false;
+                } else {
+                    $("#label_pwdConfirm").html('<img style="width:15px;height:14px" src="../img/aa.png" alt="" />');
+                    return true;
+                }
+            }
+        };
+    
+        function emailCheck() {
+            var email = $("#email").val();
+            if (email == "") {
+                $("#label_email").html('<strong style="color:red">邮箱不能为空!</strong>');
+                return false;
+            } else {
+                if (checkEmail(email) == false) {
+                    $("#label_email").html('<strong style="color:red">邮箱格式不正确!</strong>');
+                    return false;
+                } else {
+                    $("#label_email").html('<img style="width:15px;height:14px" src="../img/aa.png" alt="" />');
+                    return true;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

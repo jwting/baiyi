@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人信息设置</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../css/set.css">
+
+    <style>
+        .int {
+            height: 30px;
+            text-align: left;
+            width: 600px;
+        }
+
+        .high {
+            color: red;
+        }
+
+        .submenu {
+            /* display: none; */
+        }
+    </style>
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/set.js"></script>
+    <script src="../js/distpicker.data.js"></script>
+    <script src="../js/distpicker.js"></script>
+
+</head>
+
+<body>
+    <div class="box w1200">
+        <h2>个人信息设置</h2>
+        <div class="main">
+            <form method="post" action="#">
+                <!-- 姓名 -->
+                <div class="int">
+                    <span class="high">*</span><label for="name">姓：</label>
+                    <input type="text" id="name" class="required" />
+                    <span class="high">*</span><label for="name">名：</label>
+                    <input type="text" id="name" class="required" />
+                </div>
+                <!-- 别名 -->
+                <div class="int">
+                    <label for="alias">别名：</label>
+                    <input type="text" id="alias" />
+                </div>
+                <!-- 性别 -->
+                <div class="int">
+                    <label for="gender" class="">性别</label>
+                    <label>
+                        <input type="radio" name="gender" value="male" /> 男
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" /> 女
+                    </label>
+                </div>
+                <!-- 排行 -->
+                <div class="int">
+                    <label class="seniority">排行</label>
+                    <select class="form-control" name="country">
+                        <option value="">请选择</option>
+                        <option value="fr">老大</option>
+                        <option value="de">老二</option>
+                        <option value="it">老三</option>
+                        <option value="jp">老四</option>
+                        <option value="ru">老五</option>
+                    </select>
+                </div>
+                <!-- 电话 -->
+                <div>
+                    电话：12345679811
+                </div>
+                <!-- 简介 -->
+                <div class="int">
+                    <label for="introduce">简介：</label>
+                    <input type="text" id="introduce" />
+                </div>
+
+                <!-- 详细资料 -->
+                <div id="accordion" class="accordion">
+                    <div class="link">详细资料</div>
+                    <div class="submenu">
+                        <h2>出生信息</h2>
+                        <hr>
+                        <!-- 生日 -->
+                        生日：<input type="text" id="dt" placeholder="请选择" autocomplete="off">
+                        <div id="dd"></div>
+                        <!-- 地址 -->
+                        <div data-toggle="distpicker">
+                            <div class="form-group">
+                                <label class="sr-only" for="province1">省</label>
+                                <select class="form-control" id="province1"></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="city1">市</label>
+                                <select class="form-control" id="city1"></select>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="district1">区</label>
+                                <select class="form-control" id="district1"></select>
+                            </div>
+                            <input type="text">
+                        </div>
+                        <!-- 是否健在 -->
+                        <div class="int">
+                            <label for="jianzai" class="">健在</label>
+                            <label>
+                                <input type="radio" name="yes" value="male" /> 是
+                            </label>
+                            <label>
+                                <input type="radio" name="no" value="female" /> 否
+                            </label>
+                        </div>
+                        <h2>邀请人信息</h2>
+                        <hr>
+                        推荐人：戴斯 (您的弟弟)
+                        <br>
+                        手机号： 12132132
+                        <div class="int">
+                            <label for="jieshou" class="">接收</label>
+                            <label>
+                                <input type="radio" name="yes" value="male" /> 是
+                            </label>
+                            <label>
+                                <input type="radio" name="no" value="female" /> 否
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 提交 -->
+                <div class="int">
+                    <input type="submit" value="完成" id="send" style="margin-left: 70px;" />
+                    <input type="reset" value="重置" id="res" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
