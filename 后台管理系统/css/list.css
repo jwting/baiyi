@@ -1,0 +1,205 @@
+.layui-table,
+.layui-table-view {
+    margin: 0;
+    font-family: "siyuan";
+}
+
+.layui-table-fixed-l,
+.layui-table-fixed-r {
+    display: none;
+}
+
+.layui-table-view .layui-table {
+    width: 100%;
+
+}
+
+.layui-table td,
+.layui-table th,
+.layui-table-col-set,
+.layui-table-fixed-r,
+.layui-table-grid-down,
+.layui-table-header,
+.layui-table-page,
+.layui-table-tips-main,
+.layui-table-tool,
+.layui-table-total,
+.layui-table-view,
+.layui-table[lay-skin=line],
+.layui-table[lay-skin=row] {
+    padding: 0 36px;
+    border-style: none;
+    font-size: 16px;
+}
+
+.layui-table tbody tr:hover,
+.layui-table thead tr,
+.layui-table-header,
+.layui-table-hover,
+.layui-table-mend,
+.layui-table-patch,
+.layui-table-tool,
+.layui-table-total,
+.layui-table-total tr,
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color: #eee;
+    box-sizing: border-box;
+    color: #333;
+    padding: 0;
+}
+
+.layui-table-click {
+    background-color: none;
+}
+
+.s-main {
+    overflow: hidden;
+    background-color: #fff;
+    margin: 40px;
+    font-family: "siyuan1";
+}
+
+.layui-table tr {
+    height: 68px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.layui-table-cell {
+    text-align: center;
+}
+
+#demo7 {
+    margin: 20px 0;
+    padding: 0 36px;
+    float: right;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    border: 1px solid #C16B67;
+    background-color: #fff;
+}
+
+.layui-laypage .layui-laypage-curr em {
+    color: #B14641;
+}
+
+.layui-laypage a:hover {
+    color: #B14641;
+}
+
+.layui-btn {
+    font-size: 16px;
+    color: #108EE9;
+}
+
+.layui-table-body {
+    overflow: hidden;
+}
+
+.layui-title {
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: 18px 0 18px 36px;
+}
+
+.layui-title input[type="search"],
+.popup-title input[type="search"],
+#test6 {
+    margin-top: 20px;
+    text-indent: 1em;
+    width: 220px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(136, 136, 136, 1);
+}
+
+.btn1 {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("../icon/search.png") no-repeat;
+    top: 55px;
+    left: 188px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.date-filter {
+    overflow: hidden;
+}
+
+.date-filter li {
+    float: left;
+    margin-right: 36px;
+    line-height: 80px;
+}
+
+.date-filter li a {
+    font-size: 20px;
+    color: #888;
+}
+
+
+
+/* <link rel="stylesheet" href="../lib/layui/css/layui.css" media="all"> <script src="../lib/layui/layui.js"></script>*/
+
+/* // response: {
+    //     statusName: 'status',
+    //     statusCode:200, // 对应 code自定义的参数名称
+    //     msgName: 'msg', // 对应 msg自定义的参数名称
+    //     countName: 'countSum', // 对应 count自定义的参数名称
+    //     dataName: 'data' // 对应 data自定义的参数名称
+    // } */
+
+
+.popup-title {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+}
+
+.popup-title h3 {
+    float: left;
+    margin: 18px 0 16px 36px;
+    font-size: 16px;
+    color: #888;
+}
+
+.btn2 {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background: url("../icon/search.png") no-repeat;
+    top: 28px;
+    left: 560px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.layui-layer-iframe .layui-layer-btn,
+.layui-layer-page .layui-layer-btn {
+
+    text-align: center;
+}
+
+.layui-layer-btn .layui-layer-btn0,
+.layui-layer-btn .layui-layer-btn1 {
+    width: 130px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+    color: #b14641;
+    border: 1px solid #b14641;
+}
+
+.layui-layer-btn .layui-layer-btn1 {
+    background-color: #b14641;
+    color: #fff;
+}

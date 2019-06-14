@@ -1,0 +1,169 @@
+.paternal-header {
+    /* width: 100%; */
+    height: 98px;
+    overflow: hidden;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(238, 238, 238, 1);
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'siyuan1';
+}
+
+/* 按钮提交 */
+.paternal-btn {
+    float: left;
+    width: 68px;
+}
+
+.paternal-btn input[type="button"] {
+    color: #666;
+    margin-bottom: 10px;
+    width: 68px;
+    height: 30px;
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid #e5e5e5;
+}
+
+.paternal-break {
+    float: left;
+    margin: 5px 40px;
+    display: inline-block;
+    width: 0;
+    height: 60px;
+    border: 1px solid #d1d1d1;
+}
+
+/* ************** */
+/* 节点操作 */
+.paternal-operation,
+.paternal-relation,
+.paternal-assign,
+.paternal-centralization {
+    margin-top: 5px;
+    float: left;
+}
+
+.paternal-operation input[type="button"],
+.paternal-edit input[type="button"] {
+    margin-right: 30px;
+    line-height: 60px;
+    cursor: pointer;
+    float: left;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    color: #777;
+}
+
+.paternal-relation a {
+    margin-right: 8px;
+}
+
+.paternal-relation b {
+    font-weight: normal;
+    color: #888;
+    margin-right: 20px;
+}
+
+/* ************** */
+/* 编辑操作 */
+.paternal-edit {
+    margin-top: 5px;
+    float: left;
+    width: 140px;
+}
+
+.paternal-relation a,
+.paternal-edit a,
+.paternal-centralization a,
+.paternal-assign a {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.paternal-input {
+    float: right;
+    margin-top: 10px;
+    width: 122px;
+    height: 44px;
+    background-color: rgba(248, 248, 248, 1);
+    border: 1px solid rgba(229, 229, 229, 1);
+}
+
+.paternal-input a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* ************** */
+/* 内容区域 */
+
+.layui-tab {
+    margin: 0;
+}
+
+.layui-tab-title {
+    height: 90px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.layui-tab-title li {
+    margin-top: 29px;
+    font-family: "siyuan";
+    font-size: 20px;
+    color: #333;
+    padding: 0;
+    margin-left: 78px;
+    padding: 0 5px;
+    transition: all .2s;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    line-height: 0;
+    margin-top: 29px;
+    color: #b14641;
+    font-size: 20px;
+
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    border-bottom: 4px solid #b14641;
+}
+
+
+.layui-search {
+    position: absolute;
+    top: 105px;
+    right: 95px;
+}
+
+.parent {
+    position: relative;
+}
+
+.search {
+    width: 200px;
+    height: 40px;
+    border-radius: 18px;
+    outline: none;
+    border: 2px solid #ccc;
+    padding-left: 20px;
+}
+
+.btn {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: url("../icon/search.png") no-repeat;
+    top: 8px;
+    left: 188px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

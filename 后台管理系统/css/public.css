@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+/* CSS Document */
+/* css 初始化 */
+/* 1.清除浏览器默认样式 */
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+select,
+img,
+table,
+div {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  height: 0px;
+}
+
+/* 2.针对性处理 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  border: none;
+  display: inline-block;
+  /*img底部空白*/
+}
+
+input,
+area {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font-size: 14px;
+  color: #888;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-size: 16px;
+  color: #888;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-size: 16px;
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: 16px;
+  color: #888;
+}
+
+/* 谷歌浏览器表单元素外框 */
+
+
+/* 3.设置全局样式 */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Microsoft YaHei", "微软雅黑", Arial;
+  min-width: 1200px;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+/* 4.定义常用类 */
+.w1200 {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*版心*/
+.w1170 {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/*版心*/
+/*闭合浮动*/
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.cl {
+  clear: both;
+}
+
+/*浮动*/
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*文字排版方向*/
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/*响应式图片*/
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.lr-tb {
+  -webkit-writing-mode: horizontal-tb;
+  writing-mode: lr-tb;
+  writing-mode: horizontal-tb;
+}
+
+.tb-rl {
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.tb-lr {
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: tb-rl;
+  writing-mode: vertical-lr;
+}
+
+@font-face {
+  font-family: 'siyuan';
+  src: url('../lib/SourceHanSerifCN-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'siyuan1';
+  src: url('../lib/SourceHanSerifCN-Medium.otf');
+}
+
+/*第二步：定义使用iconfont的样式*/
+.iconfont {
+  font-family: "siyuan" !important;
+  /* font-size:12px; */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.box {
+  overflow: auto;
+  box-sizing: content-box;
+  overflow: hidden;
+  background: #F8F6F4;
+}
+
+.s-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 288px;
+  bottom: 0;
+  font-size: 20px;
+  font-family: "siyuan1";
+  background-color: #fff;
+}
+
+.s-side .s-firstItem {
+  position: relative;
+  height: 80px;
+  background-color: #B14641;
+}
+
+.s-side .s-firstItem a .logo {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  /* text-align: center; */
+  background: url(../icon/logo2.png) no-repeat center;
+}
+
+.s-side .s-firstItem h3 {
+  /* display: inline-block; */
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+  font-size: 24px;
+  font-family: "siyuan";
+}
+
+.s-side>ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.s-side>ul>li {
+  line-height: 60px;
+  width: 100%;
+}
+
+.s-side>ul>li>a>i,
+.s-side>ul>li>div>i {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+.s-side>ul>li:hover a {
+  color: #333;
+}
+
+i.layui-icon-down {
+  float: right;
+}
+
+.iconRotate {
+  transform: rotate(180deg);
+  transition: transform .5s;
+}
+
+.s-firstNav>i.layui-icon-down {
+  margin-right: 5px;
+  text-align: center;
+}
+
+
+
+.s-secondDrop li a {
+  font-size: 16px;
+  color: #666;
+}
+
+.s-firstDrop,
+.s-secondDrop {
+  display: none;
+}
+
+.s-secondNav {
+  padding-left: 90px;
+}
+
+.s-secondNav>i.layui-icon-down {
+  margin-right: 18px;
+}
+
+.s-secondDrop li {
+  padding-left: 95px;
+}
+
+.s-secondDrop li:hover {
+  background-color: rgba(246, 240, 240, .8);
+  color: #B14641;
+  border-right: 4px solid #B14641;
+}
+
+/* 右边内容区域 */
+.s-body {
+  margin-left: 288px;
+  box-sizing: border-box;
+}
+
+.layui-header {
+  height: 80px;
+  line-height: 80px;
+  background-color: #fff;
+}
+
+.layui-nav {
+  padding-right: 88px;
+  background-color: #fff;
+}
+
+.layui-nav .layui-nav-item a,
+.layui-nav .layui-nav-item a:hover {
+  cursor: pointer;
+  font-family: 'siyuan1';
+  font-size: 16px;
+  color: #666;
+
+}
+
+.layui-nav .layui-badge,
+.layui-nav .layui-badge-dot {
+  position: absolute;
+  top: 30%;
+  margin: -3px -5px 0;
+}
+
+.layui-nav-child .layui-anim .layui-anim-upbit .layui-show {
+  border: none;
+}
+
+.layui-tab-content .layui-tab-item {
+  padding: 15px 30px 0 30px;
+}
+
+.layui-nav .layui-this:after,
+.layui-nav-bar,
+.layui-nav-tree .layui-nav-itemed:after {
+  height: 0px;
+  font-size: 16px;
+}
