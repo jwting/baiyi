@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>layui</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../lib/layui/css/layui.css" media="all">
+    <!-- <link rel="stylesheet" href="../css/public.css" media="all"> -->
+    <link rel="stylesheet" href="../css/list.css" media="all">
+    <script src="../js/jquery-1.11.2.min.js"></script>
+    <script src="../lib/layui/layui.js"></script>
+    <script src="../js/main.js"></script>
+    <scrip></scrip>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body>
+    <div class="popup" style="margin-top: 40px">
+        <div class="popup-main">
+            <table class="layui-table" lay-data="{ 
+                url:'http://39.98.47.107:9005/user/getGIdUsers?id=1', 
+                page:true, 
+                response: {
+                  statusName: 'status',
+                  statusCode: 200, // 对应 code自定义的参数名称
+                  msgName: 'msg', // 对应 msg自定义的参数名称
+                  countName: 'countSum', // 对应 count自定义的参数名称
+                  dataName: 'data', // 对应 data自定义的参数名称
+            
+              },
+              id:'idTest'
+            }" lay-filter="demo">
+                <thead>
+                    <tr>
+                        <!-- <th lay-data="{type:'checkbox', fixed: 'left',minWidth:80,}"></th> -->
+                        <th lay-data="{field:'img',width:100}">用户头像</th>
+                        <th lay-data="{field:'id', sort: true,width:120, fixed: true}">用户ID</th>
+                        <th lay-data="{field:'nickName',width:120}">用户名</th>
+                        <!-- <th lay-data="{field:'sex', width:80, sort: true}">性别</th> -->
+                        <!-- <th lay-data="{field:'ancestralHome', width:120}">祖籍</th> -->
+                        <!-- <th lay-data="{field:'currentResidence', width:280}">现居地</th> -->
+                        <!-- <th lay-data="{field:'school', width:150}">毕业院校</th> -->
+                        <th lay-data="{field:'family-name',width:120}">族谱名称</th>
+                        <!-- <th lay-data="{fixed: 'right',align:'center', toolbar: '#barDemo',width:130}">操作</th> -->
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+
+    </div>
+    <!-- <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">族谱</a>
+        <a class="layui-btn layui-btn-xs" lay-event="edit">合并</a>
+    </script> -->
+
+    <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+   
+
+</body>
+
+</html>
