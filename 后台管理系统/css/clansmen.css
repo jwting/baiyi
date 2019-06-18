@@ -1,0 +1,294 @@
+.layui-tab-content {
+    padding: 0px;
+}
+
+.layui-tab-title {
+    padding-left: 0px;
+    border: none;
+}
+
+.layui-tab {
+    padding: 0 40px 20px 40px;
+}
+
+.layui-tab-content .layui-tab-item {
+    padding: 0;
+}
+
+.clans-title {
+    overflow: hidden;
+    font-family: 'siyuan';
+    margin: 45px 0 38px 0;
+}
+
+.clans-title h3 {
+    margin-right: 16px;
+    color: #333;
+    font-size: 24px;
+}
+
+.clans-title a {
+    line-height: 38px;
+    color: #108EE9;
+    font-size: 20px;
+}
+
+.parent {
+    position: relative;
+}
+
+.new-profile {
+    margin-left: 12px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #b14641;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn4 {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    background: url("../icon/search.png") no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 内容部分 */
+.clans-all {
+    min-width: 1400px;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.clans-all>ul {
+    width: 101%;
+    overflow: hidden;
+}
+
+.clans-all>ul>li {
+    float: left;
+    width: 17%;
+    height: 240px;
+    margin-right: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 48px;
+    /* //强制不换行 */
+    white-space: nowrap;
+    /* //自动隐藏文字 */
+    overflow: hidden;
+    /* //文字隐藏后添加省略号 */
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.clans-all>ul>li:last-child {
+    margin-right: 0;
+}
+
+.clans-all>ul>li>h3 {
+    margin: 10px 0;
+    color: #666;
+    font-size: 20px;
+}
+
+.clans-all>ul>li>p {
+    font-size: 16px;
+    color: #b14641;
+}
+
+.clans-all>ul>li>.clans-foot {
+    position: relative;
+    margin-top: 20px;
+    padding: 0 12px;
+    text-align: left;
+}
+
+.clans-all>ul>li>.clans-foot h4 {
+    color: #888;
+    font-size: 16px;
+}
+
+.clans-foot .clans-edit {
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    width: 20px;
+    height: 20px;
+    background: url(../icon/bianji.png) no-repeat center;
+}
+
+.clans-foot .clans-del {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    width: 20px;
+    height: 22px;
+    background: url(../icon/shanchu.png) no-repeat center;
+}
+
+#demo7 {
+    margin-top: 100px;
+    float: right;
+    margin-right: -35px;
+}
+
+.festival {
+    padding-top: 36px;
+    padding-left: 48px;
+    min-height: 800px;
+    font-family: 'siyuan1';
+}
+
+.festival h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.festival form {
+    margin-top: 21px;
+}
+
+.layui-form-item {
+    margin-bottom: 0px;
+    /* margin: 40px 0; */
+}
+
+.festiva-type {
+    margin: 40px 0;
+}
+
+.layui-form-label {
+    font-size: 18px;
+    color: #666;
+}
+
+.layui-input,
+.layui-textarea {
+    width: 529px;
+    height: 40px;
+}
+
+.layui-input-block {
+    margin-left: 0px;
+    min-height: 0px;
+}
+
+.layui-select-title {
+    float: left;
+    margin: 100px 0 270px 0px;
+}
+
+.layui-form-select .layui-edge {
+    display: none;
+}
+
+.layui-form-select .layui-input {
+    width: 160px;
+    height: 40px;
+    background-color: #b14641;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #b14641;
+    color: #fff;
+    width: 160px;
+    height: 40px;
+    border: none;
+}
+
+.layui-form-select dl dd {
+    width: 160px;
+    border: 1px solid #BBB;
+    box-sizing: border-box;
+    color: #666;
+}
+
+.layui-form-select dl {
+    position: absolute;
+    left: 0px;
+    top: 140px;
+    box-shadow: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.layui-inline {
+    margin-top: 32px;
+}
+
+.festiva-cancel {
+    position: absolute;
+    top: 100px;
+    left: 175px;
+    width: 120px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #b14641;
+    background: none;
+    font-size: 16px;
+    color: #b14641;
+    cursor: pointer;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i {
+    color: #b14641;
+}
+
+.layui-form-radio * {
+    font-size: 18px;
+    color: #666;
+}
+
+.layui-form-radio>i {
+    margin-right: 12px;
+}
+
+.upload-btn {
+    float: left;
+    position: relative;
+    width: 140px;
+    padding: 100px 0 20px 0;
+    background-color: #F3F3F3;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.upload-btn span {
+    font-size: 40px;
+    color: #B4B4B4;
+    position: absolute;
+    top: 33px;
+    left: 50px;
+}
+
+.layui-upload-list {
+    float: left;
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 0 0 0 16px;
+    border: 1px solid #b14641;
+    box-sizing: border-box;
+    /* background:url(../icon/touxiang.png) no-repeat; */
+}
+
+#demoText{
+    display: none;
+}
