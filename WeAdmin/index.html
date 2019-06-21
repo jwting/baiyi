@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>戴氏族谱后台管理系统</title>
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="Cache-Control" content="no-siteapp" />
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./static/css/font.css">
+	<link rel="stylesheet" href="./static/css/weadmin.css">
+	<script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<!-- 顶部开始 -->
+	<div class="container">
+		<div class="logo">
+			<span></span>
+			<a href="./index.html">戴氏族谱运营后台</a>
+		</div>
+		<ul class="layui-nav right" lay-filter="">
+			<li class="layui-nav-item">
+				<a href="javascript:;">李小白</a>
+				<dl class="layui-nav-child">
+					<!-- 二级菜单 -->
+					<dd>
+						<a onclick="WeAdminShow('个人信息')">权限管理</a>
+					</dd>
+					<dd>
+						<a onclick="WeAdminShow('切换帐号','./login.html')">切换帐号</a>
+					</dd>
+					<dd>
+						<a class="loginout" href="./login.html">退出</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<!-- 顶部结束 -->
+	<!-- 中部开始 -->
+	<!-- 左侧菜单开始 -->
+	<div class="left-nav">
+		<div id="side-nav">
+			<ul id="nav">
+				<!-- 运营中台 -->
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe6b8;</i>
+						<cite>运营中台</cite>
+						<i class="iconfont nav_right">&#xe697;</i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+
+								<cite>宗室配置</cite>
+								<i class="iconfont nav_right">&#xe697;</i>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a _href="./pages/family/configure.html">
+
+										<cite>宗亲喜事配置</cite>
+									</a>
+								</li>
+								<li>
+									<a _href="./pages/family/congratulate.html">
+
+										<cite>宗室祝贺</cite>
+									</a>
+								</li>
+								<li>
+									<a _href="./pages/family/fund.html">
+
+										<cite>宗室基金</cite>
+									</a>
+								</li>
+								<li>
+									<a _href="./pages/family/worship.html">
+
+										<cite>宗祠祭拜</cite>
+									</a>
+								</li>
+								<li>
+									<a _href="./pages/family/worship.html">
+
+										<cite>图片素材</cite>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</li>
+				<!-- ------------ -->
+				<!-- 族谱管理 -->
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe6b8;</i>
+						<cite>族谱管理</cite>
+						<i class="iconfont nav_right">&#xe697;</i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+
+								<cite>用户族谱</cite>
+								<i class="iconfont nav_right">&#xe697;</i>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a _href="./pages/enealogy/list.html">
+
+										<cite>族谱列表</cite>
+									</a>
+								</li>
+								<li>
+									<a _href="./pages/enealogy/node.html">
+
+										<cite>族谱合并</cite>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:;">
+
+								<cite>主干族谱</cite>
+								<i class="iconfont nav_right">&#xe697;</i>
+							</a>
+							<ul class="sub-menu">
+								<li>
+									<a _href="./pages/enealogy/trunk.html">
+
+										<cite>拆分任务</cite>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- ------------ -->
+				<!-- 族册管理 -->
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe723;</i>
+						<cite>族册管理</cite>
+						<i class="iconfont nav_right">&#xe697;</i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a _href="./pages/order/list.html">
+								<cite>族册</cite>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<!-- ------------ -->
+				<!-- 其他 -->
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe6b8;</i>
+						<cite>其他</cite>
+						<i class="iconfont nav_right">&#xe697;</i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="javascript:;">
+
+								<cite>数据备份</cite>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+
+								<cite>帮助信息(接入)</cite>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<!-- ------------ -->
+				<!-- 运营管理 -->
+				<li>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe726;</i>
+						<cite>运营管理</cite>
+						<i class="iconfont nav_right">&#xe697;</i>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a _href="./pages/admin/list.html">
+
+								<cite>权限管理</cite>
+							</a>
+						</li>
+						<li>
+							<a _href="./pages/admin/role.html">
+
+								<cite>账号管理</cite>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<!-- ------------ -->
+			</ul>
+		</div>
+	</div>
+	<!-- <div class="x-slide_left"></div> -->
+	<!-- 左侧菜单结束 -->
+	<!-- 右侧主体开始 -->
+	<div class="page-content">
+		<div class="layui-tab tab" lay-filter="wenav_tab" id="WeTabTip" lay-allowclose="true">
+			<ul class="layui-tab-title" id="tabName">
+				<li>首页</li>
+			</ul>
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<iframe src='./pages/enealogy/trunk.html' frameborder="0" scrolling="yes" class="weIframe"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 右侧主体结束 -->
+	<!-- 中部结束 -->
+	<!-- 底部开始 -->
+	<!-- 底部结束 -->
+
+	<script type="text/javascript">
+		//			layui扩展模块的两种加载方式-示例
+		//		    layui.extend({
+		//			  admin: '{/}../../static/js/admin' // {/}的意思即代表采用自有路径，即不跟随 base 路径
+		//			});
+		//			//使用拓展模块
+		//			layui.use('admin', function(){
+		//			  var admin = layui.admin;
+		//			});
+		layui.config({
+			base: './static/js/',
+			version: '101100'
+		}).use('admin');
+		layui.use(['jquery', 'admin'], function () {
+			var $ = layui.jquery;
+			$(function () {
+				var login = JSON.parse(localStorage.getItem("login"));
+				if (login) {
+					if (login = 0) {
+						window.location.href = './login.html';
+						return false;
+					} else {
+						return false;
+					}
+				} else {
+					window.location.href = '###';
+					return false;
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
