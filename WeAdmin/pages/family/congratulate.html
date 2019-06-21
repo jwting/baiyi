@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宗室祝贺——用户祝贺记录</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/public.css">
+    <link rel="stylesheet" href="../../static/css/list.css">
+    <script src="../../static/js/jquery-1.11.2.min.js"></script>
+    <script src="../../lib/layui/layui.js"></script>
+    <script src="../../static/js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="box">
+        <!-- 右边内容区域 -->
+        <div class="s-body">
+            <!-- 中间内容 -->
+            <div class="s-main">
+                <!-- 首页tab菜单 -->
+                <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">用户祝贺记录</li>
+                        <li>编辑祝贺项目</li>
+                        <li>目前祝贺项目</li>
+                    </ul>
+                    <!-- tab栏对应内容 -->
+                    <div class="layui-tab-content">
+                        <!-- 用户祝贺记录内容 -->
+                        <div class="layui-tab-item layui-show">
+                            <div class="layui-title">
+                                <form action="" class="pull-left">
+                                    <input type="search" placeholder="搜索用户名或ID">
+                                    <input type="button" name="" id="" class="btn3">
+                                </form>
+                                <ul class="date-filter pull-right">
+                                    <li><a href="###">今日</a></li>
+                                    <li><a href="###">本周</a></li>
+                                    <li><a href="###">本月</a></li>
+                                    <li><a href="###">全年</a></li>
+                                    <li><a href="###">全部</a></li>
+                                    <li><input type="text" id="test6" placeholder="2019-10-02 ～ 2019-10-10"></li>
+                                </ul>
+                            </div>
+                            <table class="layui-table" lay-data="{ 
+                                                    url:'http://39.98.47.107:9005/user/getGIdUsers?id=1', 
+                                                    page:true, 
+                                                    response: {
+                                                      statusName: 'status',
+                                                      statusCode: 200, // 对应 code自定义的参数名称
+                                                      msgName: 'msg', // 对应 msg自定义的参数名称
+                                                      countName: 'countSum', // 对应 count自定义的参数名称
+                                                      dataName: 'data', // 对应 data自定义的参数名称
+                                                
+                                                  },
+                                                  id:'idTest'
+                                                }" lay-filter="demo">
+                                <thead>
+                                    <tr>
+                                        <!-- <th lay-data="{type:'checkbox', fixed: 'left',minWidth:80,}"></th> -->
+                                        <th lay-data="{field:'id',width:120}">用户ID</th>
+                                        <th lay-data="{field:'nickName',width:120}">用户名</th>
+                                        <th lay-data="{field:'ancestralHome', width:120}">祝贺项目</th>
+                                        <th lay-data="{field:'sex', width:80, sort: true}">金额</th>
+                                        <th lay-data="{field:'currentResidence', width:280}">祝贺订单</th>
+                                        <!-- <th lay-data="{field:'school', width:150}">毕业院校</th> -->
+                                        <th lay-data="{field:'email', width:200}">祝贺时间</th>
+                                        <!-- <th lay-data="{fixed: 'right',align:'center', toolbar: '#barDemo'}">操作</th> -->
+                                    </tr>
+                                </thead>
+                            </table>
+                            <button class="edit-btn">导出</button>
+                            <div id="demo7"></div>
+                        </div>
+
+                        <!-- 编辑祝贺项目的内容 -->
+                        <div class="layui-tab-item">
+                            <div class="felicitate-project">
+                                <div class="default-project">
+                                    <input type="checkbox"> <b>使用默认项目:</b>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="custom-project">
+                                    <b>自定义项目:</b>
+                                    <ul>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 目前祝贺项目的内容 -->
+                        <div class="layui-tab-item">
+                            目前祝贺项目的内容
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <script type="text/html" id="barDemo"> -->
+            <!-- <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">族谱</a>
+                <a class="layui-btn layui-btn-xs" lay-event="same">合并</a> -->
+            <!-- <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a> -->
+            <!-- </script> -->
+        </div>
+    </div>
+</body>
+
+</html>
