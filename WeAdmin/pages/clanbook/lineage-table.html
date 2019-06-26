@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>世系表封面</title>
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/css/font.css">
+    <link rel="stylesheet" href="../../static/css/list.css">
+    <script src="../../static/js/jquery-1.11.2.min.js"></script>
+    <script src="../../lib/layui/layui.js"></script>
+    <script src="../../static/js/main.js"></script>
+    <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
+</head>
+
+<body>
+    <div class="cover-box">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <label class="layui-form-label">当前位置:</label>
+                <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao">
+                        <option value="" selected="">封面</option>
+                        <option value="0">目录</option>
+                        <option value="1">编委会</option>
+                        <option value="2">家谱序言</option>
+                        <option value="3">姓氏来源</option>
+                        <option value="4">家族家规</option>
+                        <option value="5">家族照</option>
+                        <option value="6">世系表</option>
+                        <option value="7">人物传</option>
+                        <option value="8">大事记</option>
+                        <option value="9">后记</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="book-cover">
+            <a href="./catalogue.html" class="btn-left">
+                <i class="layui-icon">&#xe603;</i>
+            </a>
+            <a href="./cover-table.html" class="btn-right">
+                <i class="layui-icon">&#xe602;</i>
+            </a>
+            <div class="book-table">
+                <h1>世</h1>
+                <h1>系</h1>
+                <h1>表</h1>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
